@@ -36,7 +36,7 @@ class Server:
                 break
             pages.append(data)
             start_index += 1
-        
+
         return pages
 
 
