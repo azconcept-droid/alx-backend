@@ -31,7 +31,7 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
         start_index, end_index = index_range(page, page_size)
         pages = []
-        for data in self.dataset():
+        for data in self.dataset()[start_index:]:
             if start_index == end_index:
                 break
             pages.append(data)

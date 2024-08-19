@@ -9,6 +9,10 @@ res = index_range(1, 7)
 print(type(res))
 print(res)
 
+res = index_range(3, 2)
+print(type(res))
+print(res)
+
 res = index_range(page=3, page_size=15)
 print(type(res))
 print(res)
