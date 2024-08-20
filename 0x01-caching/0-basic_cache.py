@@ -17,5 +17,5 @@ class BasicCache(BaseCaching):
         """ Get data from cache """
         if key in self.cache_data.keys():
             return self.cache_data[key]
-        
+
         return None

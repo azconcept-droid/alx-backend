@@ -22,10 +22,10 @@ class FIFOCache(BaseCaching):
             first_key = next(iter(self.cache_data))
             del self.cache_data[first_key]
             print("Discard: {}".format(first_key))
-    
+
     def get(self, key):
         """ Get data from cache """
         if key in self.cache_data.keys():
             return self.cache_data[key]
-        
+
         return None
