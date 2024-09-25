@@ -9,6 +9,8 @@ __pycache__/
 redis-6.0.10
 redis-6.0.10.tar.gz
 node_modules
+package-lock.json
+
 # Distribution / packaging
 .Python
 build/
