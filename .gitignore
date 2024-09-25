@@ -6,9 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
-./*/redis-6.0.10
-./*/redis-6.0.10.tar.gz
-./*/node_modules
+redis-6.0.10
+redis-6.0.10.tar.gz
+node_modules
 # Distribution / packaging
 .Python
 build/
