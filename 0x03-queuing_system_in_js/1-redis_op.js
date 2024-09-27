@@ -18,7 +18,13 @@ function setNewSchool(schoolName, value){
 }
 
 function displaySchoolValue(schoolName){
-	console.log(client.get(schoolName));
+	client.get(schoolName, (err, value) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(value);
+    }
+  });
 }
 
 displaySchoolValue('Holberton');
