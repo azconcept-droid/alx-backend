@@ -38,8 +38,22 @@ function getItemById(id) {
 }
 
 app.get('/list_products', (req, res)=>{
-    res.json({})
+    const list_products = [];
+    let i = 0;
+
+    listProducts.forEach((product) => {
+
+        list_products[i]['itemId'] = product.id
+        list_products[i]['itemName'] = product.name
+        list_products[i]['price'] = product.price
+        list_products[i]['initialAvailableQuantity'] = 10
+
+        i = i + 1
+    })
+
+    res.json(list_products);
 })
+
 app.listen(1245, () => {
     console.log('app running on port 1245')
 })
