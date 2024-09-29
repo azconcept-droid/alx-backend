@@ -15,7 +15,7 @@ const job = queue.create('push_notification_code', jobData)
     } else {
       console.error('Error creating job:', err);
     }
-  });
+});
 
 // Listen for job completion
 job.on('complete', () => {
