@@ -3,7 +3,7 @@
 Pass in language parameter module
 """
 from flask import Flask, render_template, request
-from flask_babel import Babel, _, lazy_gettext as _l
+from flask_babel import Babel, gettext
 
 
 class Config:
