@@ -13,8 +13,8 @@ subscriber.on('error', (err) => {
   console.error('Redis client not connected to the server: ', err);
 });
 
-// subscribe to the "" channel
-subscriber.subscribe('holberton school');
+// subscribe to the 'holberton school channel'
+subscriber.subscribe('holberton school channel');
 
 // Handle incoming messages
 subscriber.on('message', (channel, message) => {
