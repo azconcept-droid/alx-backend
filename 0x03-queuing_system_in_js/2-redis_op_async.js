@@ -1,5 +1,5 @@
 import redis from 'redis';
-const { promisify } = require('util');
+import { promisify } from "util";
 
 // Create a Redis client
 const client = redis.createClient();
@@ -18,7 +18,7 @@ function setNewSchool(schoolName, value){
 	client.set(schoolName, value, redis.print);
 }
 
-promisify(function displaySchoolValue(schoolName){
+function displaySchoolValue(schoolName){
 	client.get(schoolName, (err, value) => {
     if (err) {
       console.log(err);
@@ -26,8 +26,19 @@ promisify(function displaySchoolValue(schoolName){
       console.log(value);
     }
   });
-})
+}
 
-displaySchoolValueAsync('Holberton');
-setNewSchool('HolbertonSanFrancisco', '100');
-displaySchoolValue('HolbertonSanFrancisco');
+const displaySchoolValueAsync = promisify(displaySchoolValue);
+const setNewSchoolAsync = promisify(setNewSchool);
+
+(async () => {
+    await displaySchoolValueAsync('Holberton');
+})();
+
+(async () => {
+    await setNewSchoolAsync('HolbertonSanFrancisco', '100');
+})();
+
+(async () => {
+    await displaySchoolValueAsync('HolbertonSanFrancisco');
+})();
