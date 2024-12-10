@@ -13,11 +13,6 @@ publisher.on('error', (err) => {
   console.error('Redis client not connected to the server: ', err);
 });
 
-function helperFunction(message) {
-    // Publish a message to the "holberton school channel"
-
-}
-
 function publishMessage(message, time) {
     setInterval(() => {
       publisher.publish('holberton school channel', message, (err, reply) => {

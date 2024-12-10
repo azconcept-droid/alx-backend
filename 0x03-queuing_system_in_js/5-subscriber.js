@@ -18,8 +18,5 @@ subscriber.subscribe('holberton school channel');
 
 // Handle incoming messages
 subscriber.on('message', (channel, message) => {
-    if (message === "KILL_SERVER") {
-        subscriber.quit() // Close the connection
-    }
     console.log(`${message}`);
 });
